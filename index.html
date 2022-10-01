@@ -36,34 +36,64 @@
             margin-bottom: 10px;
         }
 
-        .form-control input,
+        .form-control input, 
         .form-control select,
         .form-control textarea {
-            border: 1px solid #ecd4a4;
-            border-radius: 2px;
+            color: #44543c;
+            background-color: #7f708f;
+            border: 1px solid;
+            border-radius: 5px;
             font-family: inherit;
             padding: 10px;
             display: block;
             width: 95%;
         }
-
         .form-control input[type="radio"],
         .form-control input[type="checkbox"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            border: 1px dobule #34495e;
+            border-radius: 4px;
+            outline: none;
+            background-color: #34495E;
+            cursor: pointer;
+            color: #7f708f;
+            background-color: #7f708f;
             display: inline-block;
-            width: auto;
+            width: auto
+            
+        }
+        
+       
+        
+        .checkbox > input:checked {
+            border: 1px dotted #41B883;
+            background-color: #34495E;
+        }
+
+        .checkbox > input:checked + span::before {
+            content: '\2713';
+            display: block;
+            text-align: center;
+            color: #41B883;
+            position: absolute;
+            left: 0.7rem;
+            top: 0.2rem;
         }
 
         button {
             background-color: #455473;
             border: 1px solid #777;
-            border-radius: 6px;
+            border-radius: 5px;
             font-family: inherit;
             font-size: 21px;
             display: block;
             width: 100%;
             margin-top: 50px;
             margin-bottom: 20px;
-        }
+        }   
     </style>
 </head>
 
