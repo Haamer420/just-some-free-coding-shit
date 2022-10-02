@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Chatex Survey
-    </title>
-
-
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Chatex Survey
+        </title>
+        
+        <div class="toggle-switch">
+            <label>
+                <link type="text/css" rel="stylesheet" href="index.css">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        
     <style>
-
+        
         
         body {
             background-image: linear-gradient(to top right, #be442f, #3c3e5d);
-            font-family: Verdana;
+            background-size: 100%;
+            font-family: Helvetica;
             color: #acacb4;
             text-align: center;
+            
         }
         
         form {
@@ -28,9 +36,25 @@
             max-width: 500px;
             margin: 50px auto;
             padding: 30px 20px;
-            box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.75);
+            display: flex;
+            flex-direction: column;
+        }
+        .toggle-switch {
+            position: absolute;
+            right: 50px;
+            top: 40px;
+            border-style: solid;
+            border-radius: 5px;
+            border-width: 1px;
+            background-color: #05001c;
+            padding: right 15px;
+            align-self: flex-end;
         }
         
+        .label-name {
+            padding: 5px 0px 0px 0px;
+        }
         .form-control label {
             display: block;
             margin-bottom: 10px;
@@ -39,7 +63,7 @@
         .form-control input, 
         .form-control select,
         .form-control textarea {
-            color: #44543c;
+            color: #ede5e3;
             background-color: #7f708f;
             border: 1px solid;
             border-radius: 5px;
@@ -61,20 +85,6 @@
             width: auto
             
         }
-        .checkbox > input:checked {
-            border: 1px dotted #41B883;
-            background-color: #34495E;
-        }
-
-        .checkbox > input:checked + span::before {
-            content: '\2713';
-            display: block;
-            text-align: center;
-            color: #41B883;
-            position: absolute;
-            left: 0.7rem;
-            top: 0.2rem;
-        }
 
         button {
             background-color: #455473;
@@ -88,15 +98,15 @@
             margin-bottom: 20px;
         }   
     </style>
+    
 </head>
 
 <body>
     <h1>Chatex</h1>
-
     <form id="form">
-
+        <div class="toggle-switch"></div>
         <div class="form-control">
-            <label for="name" id="label-name">
+            <label for="name" class="label-name">
                 Name
             </label>
 
