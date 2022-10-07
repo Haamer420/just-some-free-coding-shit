@@ -9,17 +9,16 @@
             Chatex Survey
         </title>
         
-        <div class="toggle-switch">
+        <link type="text/css" rel="stylesheet" href="index.css">
+        
+        <!-- <div class="toggle-switch">
             <label>
-                <link type="text/css" rel="stylesheet" href="index.css">
                 <input class="darklightmode" type="checkbox">
                 <span class="slider"></span>
             </label>
-        </div>
+        </div> -->
         
     <style>
-        
-        
         body {
             background-image: linear-gradient(to top right, #be442f, #3c3e5d);
             background-size: 100%;
@@ -31,8 +30,8 @@
         
         form {
             border-radius: 25px;
-            background-color: #251536;
-            color: #ccc4d4;
+            background-color: var(--form-bg);
+            color: var(--form-text-color);
             max-width: 500px;
             margin: 50px auto;
             padding: 30px 20px;
@@ -94,9 +93,13 @@
             width: 100%;
             margin-top: 50px;
             margin-bottom: 20px;
-        }   
+        }
     </style>
-    
+    <style>
+        body.dark-mode form {
+
+        }
+    </style>
 </head>
 
 <body>
