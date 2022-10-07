@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Chatex Survey
+        </title>
+        
+        <div class="toggle-switch">
+            <label>
+                <link type="text/css" rel="stylesheet" href="index.css">
+                <input class="darklightmode" type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+    <style>
+        
+        
+        body {
+            background-image: linear-gradient(to top right, #be442f, #3c3e5d);
+            background-size: 100%;
+            font-family: Helvetica;
+            color: #acacb4;
+            text-align: center;
+            
+        }
+        
+        form {
+            border-radius: 25px;
+            background-color: #251536;
+            color: #ccc4d4;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.75);
+            display: flex;
+            flex-direction: column;
+        }
+        .toggle-switch {
+            position: absolute;
+            right: 50px;
+            top: 40px;
+            border-style: solid;
+            border-width: 1px;
+            padding: right 15px;
+            align-self: flex-end;
+        }
+        
+        .label-name {
+            padding: 5px 0px 0px 0px;
+        }
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-control input, 
+        .form-control select,
+        .form-control textarea {
+            color: #ede5e3;
+            background-color: #7f708f;
+            border: 1px solid;
+            border-radius: 5px;
+            font-family: helvetica;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            border: 1px double #34495e;
+            border-radius: 4px;
+            outline: none;
+            background-color: #34495E;
+            cursor: pointer;
+            color: #7f708f;
+            background-color: #7f708f;
+            display: inline-block;
+            width: auto
+            
+        }
+
+        button {
+            background-color: #455473;
+            border: 1px solid #777;
+            border-radius: 5px;
+            font-family: helvetica;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }   
+    </style>
+    
+</head>
+
+<body>
+    <h1>Chatex</h1>
+    <form id="form">
+        <div class="form-control">
+            <label for="name" class="label-name">
+                Name
+            </label>
+
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name" />
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+
+            <input type="text"
+                   id="age"
+                   placeholder="Enter your age" />
+        </div>
+
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
+
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>
+                Would you recommend Chatex
+                to a friend?
+            </label>
+
+            <label for="recommed-1">
+                <input type="radio"
+                       id="recommed-1"
+                       name="recommed">yes</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio"
+                       id="recommed-2"
+                       name="recommed">No</input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio"
+                       id="recommed-3"
+                       name="recommed">Maybe</input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>
+                What programming languages can you code in?
+            </label>
+        </div>
+        <div class="form-control">
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp">C</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">C++</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">C#</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">Java</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">Python</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">JavaScript</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">React</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Angular</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Django</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Spring</input></label>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+
+            <textarea name="comment" id="comment"
+                placeholder="Enter your comment here">
+            </textarea>
+        </div>
+
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+</body>
+
+</html>
