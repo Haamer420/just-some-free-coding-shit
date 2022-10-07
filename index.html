@@ -1,243 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Chatex Survey
-    </title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Chatex Survey
+	</title>
 
-    <style>
-        :root {
-            --form-bg: white;
-            --form-text-color: black;
-        }
-        body.dark-mode {
-            --form-bg: #251536;
-            --form-text-color: #ccc4d4;
-        }
-    </style>
+	<link
+		href="https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic"
+		rel="stylesheet" />
 
-    <style>
-        body {
-            background-image: linear-gradient(to top right, #be442f, #3c3e5d);
-            font-family: Verdana;
-            color: #acacb4;
-            text-align: center;
-        }
-        
-        form {
-            border-radius: 25px;
-            background-color: var(--form-bg);
-            color: var(--form-text-color);
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 30px 20px;
-            box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.5);
-        }
-        
-        .form-control label {
-            display: block;
-            margin-bottom: 10px;
-        }
+	<style>
+		:root {
+			--body-bg: linear-gradient(to bottom, #be442f, #3c3e5d);
+			--form-bg: #9c493b;
+			--form-text-color: #251536;
+		}
 
-        .form-control input, 
-        .form-control select,
-        .form-control textarea {
-            color: #44543c;
-            background-color: #7f708f;
-            margin: auto;
-            border: 1px solid;
-            border-radius: 5px;
-            font-family: helvetica;
-            padding: 10px;
-            display: block;
-            width: 95%;
-        }
-        .form-control input[type="radio"],
-        .form-control input[type="checkbox"] {
-            border: 1px double #34495e;
-            border-radius: 4px;
-            outline: none;
-            background-color: #34495E;
-            cursor: pointer;
-            color: #7f708f;
-            background-color: #7f708f;
-            display: inline-block;
-            width: auto;
-            margin-right: 5px;
-        }
-        .checkbox > input:checked {
-            border: 1px dotted #41B883;
-            background-color: #34495E;
-        }
+		body.dark-mode {
+			--form-bg: #251536;
+			--body-bg: linear-gradient(to bottom, #3c3e5d, #be442f);
+			--form-text-color: #ccc4d4;
+		}
+	</style>
 
-        .checkbox > input:checked + span::before {
-            content: '\2713';
-            display: block;
-            text-align: center;
-            color: #41B883;
-            position: absolute;
-            left: 0.7rem;
-            top: 0.2rem;
-        }
+	<style>
+		*,
+		*::before,
+		*::after {
+			transition: background-image 350ms, color 100ms, background-color 500ms;
+		}
+	</style>
 
-        button {
-            background-color: #455473;
-            border: 1px solid #777;
-            border-radius: 5px;
-            font-family: helvetica;
-            font-size: 21px;
-            display: block;
-            width: 100%;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            padding: 20px;
-            cursor: pointer;
-        }
-    </style>
+	<script>
+		console.log("Hello World!")
+	</script>
+
+	<style>
+		body {
+			background-image: var(--body-bg);
+			font-family: JetBrains Mono;
+			color: #acacb4;
+		}
+
+		form {
+			border-radius: 25px;
+			background-color: var(--form-bg);
+			background-image: repeating-linear-gradient(-214deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15) 1px, transparent 0px, transparent 13px);
+			background-size: 9px;
+			color: var(--form-text-color);
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.5);
+		}
+
+		.form-control {
+			margin-top: 25px;
+		}
+
+		.form-control label:first-of-type {
+			text-transform: capitalize;
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			color: var(--form-text-color);
+			background-color: #7f708f;
+			border: 1px solid;
+			border-radius: 5px;
+			font-family: helvetica;
+			padding: 10px;
+			display: block;
+			width: calc(100% - 20px);
+			/* if we change padding, we need to update this too */
+		}
+
+		.form-control select {
+			width: 100%;
+		}
+
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			border: 1px double #34495e;
+			border-radius: 4px;
+			outline: none;
+			background-color: #34495E;
+			cursor: pointer;
+			color: #7f708f;
+			background-color: #7f708f;
+			display: inline-block;
+			width: auto;
+			margin-right: 5px;
+		}
+
+		.checkbox>input:checked {
+			border: 1px dotted #41B883;
+			background-color: #34495E;
+		}
+
+		.checkbox>input:checked+span::before {
+			content: '\2713';
+			display: block;
+			text-align: left;
+			color: #41B883;
+			position: absolute;
+			left: 0.7rem;
+			top: 0.2rem;
+		}
+
+		button {
+			background-color: #455473;
+			border: 1px solid #777;
+			border-radius: 5px;
+			font-family: helvetica;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			padding: 20px;
+			cursor: pointer;
+		}
+
+		.line-break {
+			height: 5px;
+		}
+	</style>
 </head>
 
 <body>
-    <button id="logo">
-        <span class="logo-text">
-            Chatex
-        </span>
-    </button>
+	<button id="logo">
+		<span class="logo-text">
+			Chatex
+		</span>
+	</button>
 
-    <form id="form">
+	<form id="form" method="post" action="/form-submit">
+		<div class="form-control">
+			<label for="name">
+				Name
+			</label>
 
-        <div class="form-control">
-            <label for="name" id="label-name">
-                Name
-            </label>
+			<input name="name" type="text" id="name" placeholder="Enter your name" />
+		</div>
 
-            <input type="text"
-                   id="name"
-                   placeholder="Enter your name" />
-        </div>
+		<div class="form-control">
+			<label for="email">
+				Email
+			</label>
 
-        <div class="form-control">
-            <label for="email" id="label-email">
-                Email
-            </label>
+			<input name="email" type="email" id="email" placeholder="Enter your email" />
+		</div>
 
-            <input type="email"
-                   id="email"
-                   placeholder="Enter your email" />
-        </div>
+		<div class="form-control">
+			<label for="age">
+				Age
+			</label>
 
-        <div class="form-control">
-            <label for="age" id="label-age">
-                Age
-            </label>
+			<input name="age" type="number" id="age" placeholder="Enter your age" />
+		</div>
 
-            <input type="text"
-                   id="age"
-                   placeholder="Enter your age" />
-        </div>
+		<div class="form-control">
+			<label for="role">
+				Which option best describes you?
+			</label>
 
-        <div class="form-control">
-            <label for="role" id="label-role">
-                Which option best describes you?
-            </label>
+			<select name="role" id="role">
+				<option value="student">Student</option>
+				<option value="intern">Intern</option>
+				<option value="professional">Professional</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
 
-            <select name="role" id="role">
-                <option value="student">Student</option>
-                <option value="intern">Intern</option>
-                <option value="professional">Professional</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
+		<div class="form-control">
+			<label>
+				Would you recommend Chatex to a friend?
+			</label>
 
-        <div class="form-control">
-            <label>
-                Would you recommend Chatex
-                to a friend?
-            </label>
+			<input type="radio" id="recommend-1" value="1" name="recommend">
+			<label for="recommend-1">Yes</label>
+			<div class="line-break"></div>
+			<input type="radio" id="recommend-2" value="-1" name="recommend">
+			<label for="recommend-2">No</label>
+			<div class="line-break"></div>
+			<input type="radio" id="recommend-3" value="0" name="recommend">
+			<label for="recommend-3">Maybe</label>
+		</div>
+		<div class="form-control">
+			<label>
+				Does these roles/frameworks sound like yours?
+			</label>
 
-            <label for="recommed-1">
-                <input type="radio"
-                       id="recommed-1"
-                       name="recommed">yes</input>
-            </label>
-            <label for="recommed-2">
-                <input type="radio"
-                       id="recommed-2"
-                       name="recommed">No</input>
-            </label>
-            <label for="recommed-3">
-                <input type="radio"
-                       id="recommed-3"
-                       name="recommed">Maybe</input>
-            </label>
-        </div>
+			<input type="checkbox" name="roles" value="html-css-js" id="role-1">
+			<label for="role-1">HTML,CSS,JS</label>
+			<div class="line-break"></div>
+			<input type="checkbox" name="roles" value="reactjs" id="role-2">
+			<label for="role-2">ReactJS (TS)</label>
+			<div class="line-break"></div>
+			<input type="checkbox" name="roles" value="nestjs" id="role-3">
+			<label for="role-3">NestJS (TS)</label>
+			<div class="line-break"></div>
+			<input type="checkbox" name="roles" value="rn-expo" id="role-4">
+			<label for="role-4">React Native (Expo) (TS)</label>
+			<div class="line-break"></div>
+			<input type="checkbox" name="roles" value="mongodb" id="role-5">
+			<label for="role-5">MongoDB (Mongoose)</label>
+			<div class="line-break"></div>
+			<input type="checkbox" name="roles" value="security-engineer" id="role-6">
+			<label for="role-6">Software Security Engineer</label>
+			<div class="line-break"></div>
+			<input type="checkbox" name="roles" value="java" id="role-7">
+			<label for="role-7">Java</label>
+			<div class="line-break"></div>
+			<input type="checkbox" name="roles" value="swift" id="role-8">
+			<label for="role-8">Swift</label>
+		</div>
 
-        <div class="form-control">
-            <label>
-                What programming languages can you code in?
-            </label>
-        </div>
-        <div class="form-control">
-            <label for="inp-1">
-                <input type="checkbox"
-                       name="inp">C</input></label>
-            <label for="inp-2">
-                <input type="checkbox"
-                       name="inp">C++</input></label>
-            <label for="inp-3">
-                <input type="checkbox"
-                       name="inp">C#</input></label>
-            <label for="inp-4">
-                <input type="checkbox"
-                       name="inp">Java</input></label>
-            <label for="inp-5">
-                <input type="checkbox"
-                       name="inp">Python</input></label>
-            <label for="inp-6">
-                <input type="checkbox"
-                       name="inp">JavaScript</input></label>
-            <label for="inp-7">
-                <input type="checkbox"
-                       name="inp">React</input></label>
-            <label for="inp-7">
-                <input type="checkbox"
-                       name="inp">Angular</input></label>
-            <label for="inp-7">
-                <input type="checkbox"
-                       name="inp">Django</input></label>
-            <label for="inp-7">
-                <input type="checkbox"
-                       name="inp">Spring</input></label>
-        </div>
+		<div class="form-control">
+			<label for="comment">
+				Any comments or suggestions
+			</label>
 
-        <div class="form-control">
-            <label for="comment">
-                Any comments or suggestions
-            </label>
+			<textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+		</div>
 
-            <textarea name="comment" id="comment"
-                placeholder="Enter your comment here">
-            </textarea>
-        </div>
+		<button type="submit">
+			Submit
+		</button>
+	</form>
 
-        <button type="submit" value="submit">
-            Submit
-        </button>
-    </form>
+	<script>
+		const logoBtn = document.querySelector("#logo");
 
-    <script>
-        const logoBtn = document.querySelector("#logo");
+		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			document.body.classList.add("dark-mode");
+		}
 
-        if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add("dark-mode");
-        }
-
-        logoBtn.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-        });
-    </script>
+		logoBtn.addEventListener("click", () => {
+			document.body.classList.toggle("dark-mode");
+		});
+	</script>
 </body>
 
 </html>
