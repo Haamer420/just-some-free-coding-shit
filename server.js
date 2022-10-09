@@ -15,7 +15,7 @@ app.post("/form-submit", (req, res) => {
     })
     
     res.status(200).send("Submitted!");
-})
+});
 
 const PORT = process.env.PORT ?? 80;
 
